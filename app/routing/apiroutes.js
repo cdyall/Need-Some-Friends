@@ -37,10 +37,10 @@ module.exports = function(app) {
 
     console.log("Sum of users score " + sum);
     console.log("Best match friend diff " + bestMatch.friendDifference);
-    console.log("+++++++=================++++++++++");
+    console.log("++++++===++++++");
 
     //loop through all friends in database
-    for (let i = 0; i < friends.length; i++) {
+    for (let i = 0; i < friend.length; i++) {
       console.log(friends[i].name);
       totalDifference = 0;
       console.log("Total Diff " + totalDifference);
@@ -53,8 +53,8 @@ module.exports = function(app) {
 
       //sum differences/ determine best match for friends
       if (totalDifference <= bestMatch.friendDifference) {
-        bestMatch.name = friends[i].name;
-        bestMatch.photo = friends[i].photo;
+        bestMatch.name = friend[i].name;
+        bestMatch.photo = friend[i].photo;
         bestMatch.friendDifference = totalDifference;
       }
       console.log(totalDifference + " Total Difference");
